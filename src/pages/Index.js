@@ -22,7 +22,7 @@ function Index(props) {
     <div className="bookmarks-container">
         {bookmarks.map(bookmark => (
           <div className="bookmark-card" key={bookmark._id}>
-            <a href={bookmark.url} target="_blank">
+            <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
               <div className="bookmark-text">{bookmark.title}</div>
             </a>
           </div>
