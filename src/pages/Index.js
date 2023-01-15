@@ -25,6 +25,9 @@ function Index(props) {
             <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
               <div className="bookmark-text">{bookmark.title}</div>
             </a>
+            <Form action={`/delete/${bookmark._id}`} method="post">
+              <input type="submit" value='delete' />
+            </Form>
           </div>
         ))}
     </div>

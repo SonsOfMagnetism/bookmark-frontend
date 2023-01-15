@@ -1,5 +1,5 @@
 // this URL is the dev branch
-const URL = "https://bookmark-backend-dev.onrender.com"
+const URL = "http://localhost:4000"; //"https://bookmark-backend-dev.onrender.com"
 
 // loader for index route
 export const bookmarksLoader = async () => {
