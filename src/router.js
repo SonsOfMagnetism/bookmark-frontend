@@ -6,11 +6,15 @@ import {
 import App from "./App"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
+import { bookmarksLoader } from "./loaders"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App/>}>
-            <Route path="" element={<Index/>}/>
+            <Route 
+            path=""
+            loader={bookmarksLoader}
+            element={<Index/>}/>
             <Route path=":id" element={<Show/>}/>
             <Route path="create"/>
             <Route path="update/:id"/>
