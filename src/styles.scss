@@ -28,3 +28,13 @@ nav {
         }
     }
 }
+
+
+// this code is just for demo purposes
+.bookmark-card {
+  display:flex; 
+  justify-content: space-between;
+  gap: 1rem;
+  width: 200px;
+  margin: .5rem;
+}

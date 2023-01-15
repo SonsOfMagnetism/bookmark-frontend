@@ -25,6 +25,7 @@ function Index(props) {
             <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
               <div className="bookmark-text">{bookmark.title}</div>
             </a>
+            <a href={`/update/${bookmark._id}`}><button>Update</button></a>
           </div>
         ))}
     </div>
