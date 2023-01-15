@@ -11,7 +11,7 @@ function Index(props) {
     <div>
       <h2>Create a Bookmark</h2>
       <Form action="/create" method="post">
-        <input type="input" name="name" placeholder="bookmark name" />
+        <input type="input" name="title" placeholder="bookmark title" />
         <input type="input" name="url" placeholder="add url" />
         
 
