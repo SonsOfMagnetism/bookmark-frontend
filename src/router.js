@@ -7,7 +7,6 @@ import App from "./App"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
 import { createAction, deleteAction } from "./actions"
-=======
 import { bookmarksLoader } from "./loaders"
 
 const router = createBrowserRouter(
