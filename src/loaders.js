@@ -3,7 +3,7 @@ const URL = "https://bookmark-backend-dev.onrender.com"
 
 // loader for index route
 export const bookmarksLoader = async () => {
-    const response = await fetch(URL)
+    const response = await fetch(URL + "/bookmark")
     const bookmarks = response.json()
     return bookmarks
 }
