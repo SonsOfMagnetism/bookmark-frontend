@@ -38,3 +38,15 @@ nav {
   width: 200px;
   margin: .5rem;
 }
+
+ .update-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #535252f7;
+    padding: 30px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+

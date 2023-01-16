@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router-dom'
-import { Form } from "react-router-dom"
+import { Form, Link } from "react-router-dom"
+
 
 function Index(props) {
 
@@ -7,14 +8,13 @@ function Index(props) {
   const bookmarks = useLoaderData()
   console.log(bookmarks)
   
+  
   return (<>
     <div>
       <h2>Create a Bookmark</h2>
       <Form action="/create" method="post">
         <input type="input" name="title" placeholder="bookmark title" />
         <input type="input" name="url" placeholder="add url" />
-        
-
         <input type="submit" value="create bookmark" /> 
       </Form>
     </div>
@@ -25,7 +25,9 @@ function Index(props) {
             <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
               <div className="bookmark-text">{bookmark.title}</div>
             </a>
-            <a href={`/update/${bookmark._id}`}><button>Update</button></a>
+            <Link to={`update/${bookmark._id} `} >
+              <button>&#9998;</button>
+            </Link>
           </div>
         ))}
     </div>
