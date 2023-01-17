@@ -10,7 +10,7 @@ export const createAction = async ({ request }) => {
     url: formData.get("url"),
   }
   
-  await fetch(URL + "bookmark", {
+  await fetch(URL + "/bookmark", {
     method: "post",
     headers: {
       "Content-Type": "application/json",

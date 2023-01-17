@@ -18,7 +18,6 @@ function Index(props) {
         <input type="submit" value="create bookmark" /> 
       </Form>
     </div>
-
     <div className="bookmarks-container">
         {bookmarks.map(bookmark => (
           <div className="bookmark-card" key={bookmark._id}>
@@ -28,6 +27,10 @@ function Index(props) {
             <Link to={`update/${bookmark._id} `} >
               <button>&#9998;</button>
             </Link>
+            <Form action={`/delete/${bookmark._id}`} method="post">
+              <input type="submit" value='delete' />
+            </Form>
+
           </div>
         ))}
     </div>
