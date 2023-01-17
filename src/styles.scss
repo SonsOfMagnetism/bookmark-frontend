@@ -28,3 +28,25 @@ nav {
         }
     }
 }
+
+
+// this code is just for demo purposes
+.bookmark-card {
+  display:flex; 
+  justify-content: space-between;
+  gap: 1rem;
+  width: 200px;
+  margin: .5rem;
+}
+
+ .update-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #535252f7;
+    padding: 30px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+

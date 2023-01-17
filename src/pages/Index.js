@@ -1,5 +1,5 @@
 import { useLoaderData } from 'react-router-dom'
-import { Form } from "react-router-dom"
+import { Form, Link } from "react-router-dom"
 import { useState } from "react"
 
 function Index(props) {
@@ -11,10 +11,10 @@ function Index(props) {
 
   const [value, setValue] = useState("")
   
+
   const onChange = (event) => {
       setValue(event.target.value)
   }
-
 
   return (<>
     <div>
@@ -26,7 +26,7 @@ function Index(props) {
       </Form>
       
     </div>
-     
+
     <div className="bookmarks-container">
 
     <div>
@@ -45,9 +45,13 @@ function Index(props) {
             <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
               <div className="bookmark-text">{bookmark.title}</div>
             </a>
+            <Link to={`update/${bookmark._id} `} >
+              <button>&#9998;</button>
+            </Link>
             <Form action={`/delete/${bookmark._id}`} method="post">
               <input type="submit" value='delete' />
             </Form>
+
           </div>
         ))}
     </div>
