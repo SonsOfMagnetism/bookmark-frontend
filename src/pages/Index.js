@@ -1,11 +1,13 @@
 import { useLoaderData } from 'react-router-dom'
 import { Form, Link } from "react-router-dom"
-import { useState } from "react"
+import { useState } from 'react'
 
 function Index(props) {
 
   // load bookmarks from api
   const bookmarks = useLoaderData()
+  const [title, setTitle] = useState('');
+  const [url, setUrl] = useState('');
 
 
   const [sorted, setSort] = useState("")
@@ -23,9 +25,9 @@ function Index(props) {
   return (<>
     <div>
       <h2>Create a Bookmark</h2>
-      <Form action="/create" method="post">
-        <input type="input" name="title" placeholder="bookmark title" />
-        <input type="input" name="url" placeholder="add url" />
+      <Form onSubmit={(event) =>{setTitle(''); setUrl('')}} action="/create" method="post">
+        <input type="input" name="title" placeholder="bookmark title" value={title} onChange={e =>{setTitle(e.target.value)}} />
+        <input type="input" name="url" placeholder="add url" value={url} onChange={e =>{setUrl(e.target.value)}} />
         <input type="submit" value="create bookmark" /> 
       </Form>
       
