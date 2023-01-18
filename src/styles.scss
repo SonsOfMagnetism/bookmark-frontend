@@ -13,7 +13,6 @@ $contrastcolor: white;
 
 * {
     @include white-text-black-bg;
-    // text-align: center,
 }
 
 h2 {
@@ -34,16 +33,13 @@ nav {
     }
 }
 
-
-
 // this code is just for demo purposes
 .bookmark-card {
-  display:grid; 
+  display: grid; 
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  gap: 1rem;
+  gap: 10rem;
   margin: 0.5rem;
-  overflow: visible;
 }
 
  .update-container {
@@ -78,7 +74,6 @@ header {
     padding: 0px;
     margin: 0px;
     overflow: visible;
-    // margin-top: -50px;
     z-index:3
 }
 
@@ -87,18 +82,18 @@ header {
     width: 80%;
     text-align: left;
     overflow: visible;
-    margin-top: -30px;
+    margin-top: -37px;
 }
 
 .intro {
     width: 50%;
     margin-top: -45px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .forminput {
     margin-top: px;
-    z-index: 3;
+    z-index: 1;
 }
 
 .photo img {
@@ -107,6 +102,5 @@ header {
     height: 200px;
     text-align: right;
     top: -100px;
-    overflow: visible;
     right: -90px
 }
