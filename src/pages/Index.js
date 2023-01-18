@@ -8,10 +8,10 @@ function Index(props) {
   const bookmarks = useLoaderData()
 
 
-  const [sorted, setSort] = useState(false)
+  const [sorted, setSort] = useState("")
   const sortByAlphOrder = () => {
     bookmarks.sort((a, b) => a.title.localeCompare(b.title))
-    setSort(true)
+    setSort(" ")
   }
 
   const [value, setValue] = useState("")
@@ -38,7 +38,7 @@ function Index(props) {
     </div>
   
     <div>
-        <button onClick={sortByAlphOrder}>Sort By Alphabetical Order</button>
+        <button onClick={sortByAlphOrder}>Sort By Alphabetical Order {sorted}</button>
     </div>
 
       {bookmarks.filter(item => {
