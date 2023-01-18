@@ -107,7 +107,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 0rem;
         z-index: 3;
     }
 
@@ -121,13 +121,13 @@ header {
         display: none;
     }
     .bookmarks-container {
-        // text-align: center;
-        z-index:3
+        z-index:3;
     }
     .forminput {
         text-align: center;
         z-index: 1;
     }
+    .bookmark-card {
+        gap: 1rem
+    }
 }
-
-//@media 910
