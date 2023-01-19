@@ -5,26 +5,129 @@ $contrastcolor: white;
     color: $contrastcolor;
     background-color: $maincolor;
 }
-
-@mixin black-text-white-bg {
-    color: $maincolor;
-    background-color: $contrastcolor;
-}
-
 * {
     @include white-text-black-bg;
 }
 
+h2 {
+    text-align: center
+}
+
 nav {
-    @include white-text-black-bg;
+    // @include white-text-black-bg;
     display: flex;
     justify-content: flex-start;
 
     a {
-        @include white-text-black-bg;
+        // @include white-text-black-bg;
         div {
             margin: 10px;
             font-size: large;
         }
+    }
+}
+
+// this code is just for demo purposes
+.bookmark-card {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 5rem;
+  margin: 0.5rem;
+}
+
+ .update-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #535252f7;
+    padding: 30px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    overflow: visible;
+    z-index: 3;
+}
+
+header {
+    padding: 2rem;
+    z-index: 2;
+}
+
+.bookmarks-container {
+    z-index:3
+}
+
+.searchbox {
+    position: relative;
+    width: 80%;
+    text-align: left;
+    margin-top: -37px;
+}
+
+.intro {
+    width: 50%;
+    margin-top: -45px;
+    z-index: 2;
+}
+
+.forminput {
+    z-index: 1;
+}
+
+.photo img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: right;
+    top: -100px;
+    right: -90px
+}
+
+@media (max-width: 910px) {
+
+    .searchbox {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+
+    .parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0rem;
+        z-index: 3;
+    }
+
+    .intro {
+        position: relative;
+        width: 100%;
+        margin-top: 0px;
+        z-index: 2;
+    }
+    .photo img {
+        display: none;
+    }
+    .bookmarks-container {
+        z-index:3;
+    }
+    .forminput {
+        text-align: center;
+        z-index: 1;
+    }
+    .bookmark-card {
+        gap: 1rem
     }
 }
